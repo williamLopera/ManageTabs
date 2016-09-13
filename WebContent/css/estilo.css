@@ -1,0 +1,22 @@
+.textoError
+{
+	font-family: calibri;
+	font-size:15pt;
+	font-weight:bold;
+	border-color: RED;
+}
+
+.textoInput
+{
+	color:BLUE;
+	font-size:15pt;
+	font-weight:bold;
+	font-family: calibri;
+	border-color: GREEN;
+}
+
+
+.textoSalida
+{
+	color:GREEN;
+}

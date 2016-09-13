@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd" version="2.1">
+	<application>
+		<message-bundle>com.webmethods.caf.AppResources</message-bundle>
+		<locale-config>
+			<default-locale>en_US</default-locale>
+		</locale-config>
+	</application>
+
+	<managed-bean>
+		<description>applicationbean</description>
+		<display-name>ManageTabs</display-name>
+		<managed-bean-name>ManageTabs</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.ManageTabs</managed-bean-class>
+		<managed-bean-scope>application</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<description>portletbean</description>
+		<display-name>MyPortlet</display-name>
+		<managed-bean-name>MyPortlet</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.myportlet.MyPortlet</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Specifies whether the session bean expires when the pageflow is out of scope</description>
+			<display-name>Expire With Page Flow</display-name>
+			<property-name>expireWithPageFlow</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<value>true</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<description>pagebean</description>
+		<display-name>MyPortlet/default</display-name>
+		<managed-bean-name>MyPortletDefaultviewView</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.myportlet.MyPortletDefaultviewView</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Specifies whether the session bean expires when the pageflow is out of scope</description>
+			<display-name>Expire With Page Flow</display-name>
+			<property-name>expireWithPageFlow</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<value>true</value>
+		</managed-property>
+	</managed-bean>
+	<navigation-rule>
+		<from-view-id>/MyPortlet/*</from-view-id>
+		<navigation-case>
+			<from-outcome>default</from-outcome>
+			<to-view-id>/MyPortlet/default.view</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<managed-bean>
+		<description>pagebean</description>
+		<display-name>MyPortlet/page2</display-name>
+		<managed-bean-name>MyPortletpage2View</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.MyPortletpage2View</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Specifies whether the session bean expires when the pageflow is out of scope</description>
+			<display-name>Expire With Page Flow</display-name>
+			<property-name>expireWithPageFlow</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<value>true</value>
+		</managed-property>
+	</managed-bean>
+	<navigation-rule>
+		<from-view-id>/MyPortlet/*</from-view-id>
+		<navigation-case>
+			<from-outcome>page2</from-outcome>
+			<to-view-id>/MyPortlet/page2.view</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<managed-bean>
+		<description>pagebean</description>
+		<display-name>MyPortlet/page3</display-name>
+		<managed-bean-name>MyPortletpage3View</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.MyPortletpage3View</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Specifies whether the session bean expires when the pageflow is out of scope</description>
+			<display-name>Expire With Page Flow</display-name>
+			<property-name>expireWithPageFlow</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<value>true</value>
+		</managed-property>
+	</managed-bean>
+	<navigation-rule>
+		<from-view-id>/MyPortlet/*</from-view-id>
+		<navigation-case>
+			<from-outcome>page3</from-outcome>
+			<to-view-id>/MyPortlet/page3.view</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<managed-bean>
+		<description>pagebean</description>
+		<display-name>MyPortlet/ready</display-name>
+		<managed-bean-name>MyPortletreadyView</managed-bean-name>
+		<managed-bean-class>com.webmethods.caf.MyPortletreadyView</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Specifies whether the session bean expires when the pageflow is out of scope</description>
+			<display-name>Expire With Page Flow</display-name>
+			<property-name>expireWithPageFlow</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<value>true</value>
+		</managed-property>
+	</managed-bean>
+	<navigation-rule>
+		<from-view-id>/MyPortlet/*</from-view-id>
+		<navigation-case>
+			<from-outcome>ready</from-outcome>
+			<to-view-id>/MyPortlet/ready.view</to-view-id>
+		</navigation-case>
+	</navigation-rule></faces-config>

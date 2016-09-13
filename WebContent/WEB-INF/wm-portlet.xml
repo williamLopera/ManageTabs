@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wm-portlet-app version="1.0">
+	<wm-portlet>
+		<portlet-name>MyPortlet</portlet-name>
+		<category>ManageTabs</category>
+		<portlet-preferences>
+			<preference>
+				<name>personal</name>
+				<display-name>personal</display-name>
+				<description></description>
+				<scope>content</scope>
+				<property-editor type="text"></property-editor>
+				<hidden>true</hidden>
+				<required>false</required>
+				<type>String</type>
+			</preference>
+			<preference>
+				<name>laboral</name>
+				<display-name>laboral</display-name>
+				<description></description>
+				<scope>content</scope>
+				<property-editor type="text"></property-editor>
+				<hidden>true</hidden>
+				<required>false</required>
+				<type>String</type>
+			</preference></portlet-preferences></wm-portlet></wm-portlet-app>
+

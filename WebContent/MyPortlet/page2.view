@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<view>
+  <property name='pageManagedBean' value='MyPortletpage2View' />
+  <property name='preferencesBean' value='MyPortlet' />
+  <design-time-attribute name='portlet' value='MyPortlet' />
+  <control component-type='com.webmethods.caf.faces.output.ErrorMessages' renderer-type='com.webmethods.caf.faces.output.ErrorMessages'>
+    <design-time-attribute name='controlGetterMethod' value='getIdMensajeGeneral' />
+    <property name='id' value='idMensajeGeneral' />
+  </control>
+  <control component-type='com.webmethods.caf.faces.output.IncludeScript' renderer-type='com.webmethods.caf.faces.output.IncludeScript'>
+    <property name='evaluate' value='true' />
+    <property name='id' value='includeScript' />
+    <property name='value' value='/js/validador.js' />
+  </control>
+  <control component-type='com.webmethods.caf.faces.output.IncludeStylesheet' renderer-type='com.webmethods.caf.faces.output.IncludeStylesheet'>
+    <property name='id' value='includeStylesheet' />
+    <property name='value' value='/css/estilo.css' />
+  </control>
+  <control component-type='javax.faces.HtmlForm' renderer-type='javax.faces.Form'>
+    <property name='defaultFocus' value='_first' />
+    <property name='id' value='defaultForm' />
+    <control component-type='com.webmethods.caf.faces.list.Tabs' renderer-type='com.webmethods.caf.faces.list.Tabs'>
+      <property name='id' value='tabs' />
+      <property name='rows' value='10' />
+      <property name='selected' value='#{row[0]==facesContext.viewRoot.viewId}' />
+      <property name='value' value='#{MyPortletDefaultviewView.views}' />
+      <property name='var' value='row' />
+      <control component-type='com.webmethods.caf.faces.component.portleturl.PortletUrlLink' renderer-type='javax.faces.Link'>
+        <property name='id' value='portletUrlLink' />
+        <property name='onclick' value='var hidden = CAF.model(&apos;#{activePageBean.clientIds[&quot;hidden&quot;]}&apos;);&#13;&#10;hidden.go({});' />
+        <facet name='href'>
+          <control component-type='com.webmethods.caf.faces.component.portleturl.ExtendedPortletUrl' renderer-type=''>
+            <property name='id' value='extendedPortletUrl' />
+            <property name='targetView' value='#{row[0]}' />
+          </control>
+        </facet>
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlOutputText' />
+          <property name='raw' value='true' />
+          <property name='value' value='#{row[1]}' />
+        </control>
+      </control>
+    </control>
+    <control component-type='com.webmethods.caf.faces.panel.StaticRow' renderer-type='com.webmethods.caf.faces.panel.StaticRow'>
+      <property name='id' value='staticRow' />
+      <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+        <property name='id' value='staticCell' />
+        <control component-type='com.webmethods.caf.faces.command.async.Hidden' renderer-type='com.webmethods.caf.faces.command.async.Hidden'>
+          <property name='action' value='#{MyPortletDefaultviewView.myPortlet.storePreferences}' />
+          <property name='id' value='hidden' />
+          <property name='refresh' value='_none' />
+        </control>
+        <control component-type='com.webmethods.caf.faces.command.async.Button' renderer-type='com.webmethods.caf.faces.command.async.Button'>
+          <property name='action' value='#{MyPortletpage2View.myPortlet.getAnalizarDatos}' />
+          <property name='id' value='button' />
+          <property name='value' value='Guardar' />
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyGroup' renderer-type='com.webmethods.caf.faces.panel.PropertyGroup'>
+          <property name='id' value='propertyGroup' />
+          <property name='label' value='Datos Personal' />
+          <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+            <property name='id' value='propertyLine' />
+            <property name='label' value='ID' />
+            <control component-type='javax.faces.HtmlInputText' renderer-type='javax.faces.Text'>
+              <property name='disabled' value='true' />
+              <property name='id' value='idPersonal' />
+              <property name='value' value='#{MyPortletpage2View.myPortlet.personal.id}' />
+              <property name='width' value='input20' />
+            </control>
+          </control>
+          <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+            <property name='id' value='propertyLine1' />
+            <property name='label' value='Cedula' />
+            <control component-type='javax.faces.HtmlInputText' renderer-type='javax.faces.Text'>
+              <property name='id' value='idCedula' />
+              <property name='value' value='#{MyPortletpage2View.myPortlet.personal.cedula}' />
+              <property name='width' value='input20' />
+            </control>
+          </control>
+          <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+            <property name='id' value='propertyLine2' />
+            <property name='label' value='Nombre' />
+            <control component-type='javax.faces.HtmlInputText' renderer-type='javax.faces.Text'>
+              <property name='id' value='idNombre' />
+              <property name='value' value='#{MyPortletpage2View.myPortlet.personal.nombre}' />
+              <property name='width' value='input20' />
+            </control>
+          </control>
+          <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+            <property name='id' value='propertyLine3' />
+            <property name='label' value='Telefono' />
+            <control component-type='javax.faces.HtmlInputText' renderer-type='javax.faces.Text'>
+              <property name='id' value='idTelefono' />
+              <property name='value' value='#{MyPortletpage2View.myPortlet.personal.telefono}' />
+              <property name='width' value='input20' />
+            </control>
+          </control>
+          <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+            <property name='id' value='propertyLine4' />
+            <property name='label' value='Correo' />
+            <control component-type='javax.faces.HtmlInputText' renderer-type='javax.faces.Text'>
+              <property name='id' value='idCorreo' />
+              <property name='value' value='#{MyPortletpage2View.myPortlet.personal.correo}' />
+              <property name='width' value='input20' />
+            </control>
+          </control>
+        </control>
+      </control>
+    </control>
+    <control component-type='javax.faces.HtmlCommandButton' renderer-type='javax.faces.Button'>
+      <property name='action' value='#{MyPortletpage2View.validacionesAction}' />
+      <property name='id' value='idValidaciones' />
+      <property name='value' value='Enviar' />
+    </control>
+    <control component-type='javax.faces.HtmlInputHidden' renderer-type='javax.faces.Hidden'>
+      <property name='id' value='idErrores' />
+      <property name='value' value='#{MyPortletpage2View.myPortlet.mensajes}' />
+    </control>
+    <control component-type='com.webmethods.caf.faces.output.Script' renderer-type='com.webmethods.caf.faces.output.Script'>
+      <property name='id' value='script' />
+      <property name='value' value='mostrarValidaciones();' />
+    </control>
+  </control>
+</view>

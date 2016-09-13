@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<view>
+  <property name='pageManagedBean' value='MyPortletreadyView' />
+  <property name='preferencesBean' value='MyPortlet' />
+  <design-time-attribute name='portlet' value='MyPortlet' />
+  <control component-type='com.webmethods.caf.faces.output.ErrorMessages' renderer-type='com.webmethods.caf.faces.output.ErrorMessages'>
+  </control>
+  <control component-type='com.webmethods.caf.faces.output.IncludeStylesheet' renderer-type='com.webmethods.caf.faces.output.IncludeStylesheet'>
+    <property name='id' value='includeStylesheet' />
+    <property name='value' value='/css/estilo.css' />
+  </control>
+  <control component-type='javax.faces.HtmlForm' renderer-type='javax.faces.Form'>
+    <property name='defaultFocus' value='_first' />
+    <property name='id' value='defaultForm' />
+    <control component-type='com.webmethods.caf.faces.output.Custom' renderer-type='com.webmethods.caf.faces.output.Custom'>
+      <property name='id' value='custom' />
+      <property name='name' value='h1' />
+      <property name='value' value='#{MyPortletreadyView.myPortlet.datosSolicitud.datosPersonales.toString}' />
+      <control component-type='javax.faces.Parameter' renderer-type=''>
+        <property name='name' value='class' />
+        <property name='value' value='textoSalida' />
+      </control>
+      <control component-type='javax.faces.HtmlOutputText' renderer-type='javax.faces.Text'>
+        <property name='id' value='htmlOutputText' />
+        <property name='raw' value='true' />
+        <property name='value' value='Solicitud Nro.  TDC_12345_ABCD Procesada Correctamente...!' />
+      </control>
+    </control>
+    <control component-type='com.webmethods.caf.faces.panel.PropertyGroup' renderer-type='com.webmethods.caf.faces.panel.PropertyGroup'>
+      <property name='id' value='propertyGroup' />
+      <property name='label' value='Datos Personales' />
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine' />
+        <property name='label' value='ID' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlInputText' />
+          <property name='value' value='#{MyPortletreadyView.myPortlet.datosSolicitud.datosPersonales.id}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine1' />
+        <property name='label' value='Cedula' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlInputText1' />
+          <property name='value' value='#{MyPortletreadyView.myPortlet.datosSolicitud.datosPersonales.cedula}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine2' />
+        <property name='label' value='Nombre' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlInputText2' />
+          <property name='value' value='#{MyPortletreadyView.myPortlet.datosSolicitud.datosPersonales.nombre}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine3' />
+        <property name='label' value='Telefono' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlInputText3' />
+          <property name='value' value='#{MyPortletreadyView.myPortlet.datosSolicitud.datosPersonales.telefono}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine4' />
+        <property name='label' value='Correo' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlInputText4' />
+          <property name='value' value='#{MyPortletreadyView.myPortlet.datosSolicitud.datosPersonales.correo}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+    </control>
+    <control component-type='com.webmethods.caf.faces.panel.PropertyGroup' renderer-type='com.webmethods.caf.faces.panel.PropertyGroup'>
+      <property name='id' value='propertyGroup1' />
+      <property name='label' value='Datos Laborales' />
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine5' />
+        <property name='label' value='ID' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlInputText5' />
+          <property name='value' value='#{MyPortletreadyView.myPortlet.datosSolicitud.datosLaborales.id}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine6' />
+        <property name='label' value='Cargo' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlInputText6' />
+          <property name='value' value='#{MyPortletreadyView.myPortlet.datosSolicitud.datosLaborales.cargo}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine7' />
+        <property name='label' value='Fecha Inicio' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlInputText7' />
+          <property name='value' value='#{MyPortletreadyView.myPortlet.datosSolicitud.datosLaborales.fechaInicio}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine8' />
+        <property name='label' value='Direccion' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlInputText8' />
+          <property name='value' value='#{MyPortletreadyView.myPortlet.datosSolicitud.datosLaborales.direccion}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine9' />
+        <property name='label' value='Salario' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlInputText9' />
+          <property name='value' value='#{MyPortletreadyView.myPortlet.datosSolicitud.datosLaborales.salario}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+    </control>
+    <control component-type='com.webmethods.caf.faces.table.AsyncTable' renderer-type='com.webmethods.caf.faces.table.AsyncTable'>
+      <property name='footerClass' value='portlet-section-footer' />
+      <property name='headerClass' value='portlet-section-subheader' />
+      <property name='id' value='asyncTable' />
+      <property name='rowClasses' value='portlet-section-body,portlet-section-alternate' />
+      <property name='rows' value='10' />
+      <property name='selectedRowClass' value='portlet-section-selected' />
+      <property name='value' value='#{MyPortletreadyView.myPortlet.camposVariables}' />
+      <property name='var' value='camposVariable' />
+      <property name='width' value='100%' />
+      <facet name='header'>
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlOutputText' />
+          <property name='raw' value='true' />
+          <property name='value' value='Campos Variables' />
+        </control>
+      </facet>
+      <facet name='footer'>
+        <control component-type='com.webmethods.caf.faces.table.PrevNext' renderer-type='com.webmethods.caf.faces.table.PrevNext'>
+          <property name='id' value='prevNext' />
+          <control component-type='javax.faces.HtmlPanelGroup' renderer-type='com.webmethods.caf.faces.panel.BlockPanel'>
+            <property name='id' value='blockPanel' />
+            <property name='style' value='text-align:center;' />
+            <control component-type='com.webmethods.caf.faces.table.DataTotal' renderer-type='com.webmethods.caf.faces.table.DataTotal'>
+              <property name='id' value='dataTotal' />
+            </control>
+          </control>
+        </control>
+      </facet>
+      <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+        <property name='id' value='htmlTableColumn' />
+        <property name='label' value='ID' />
+        <property name='sort' value='#{camposVariable.id}' />
+        <facet name='header'>
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='javax.faces.Text'>
+            <property name='id' value='htmlOutputText1' />
+            <property name='raw' value='true' />
+            <property name='value' value='ID' />
+          </control>
+        </facet>
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlOutputText2' />
+          <property name='raw' value='true' />
+          <property name='value' value='#{camposVariable.id}' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+        <property name='id' value='htmlTableColumn1' />
+        <property name='label' value='Tabla' />
+        <property name='sort' value='#{camposVariable.tabla}' />
+        <facet name='header'>
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='javax.faces.Text'>
+            <property name='id' value='htmlOutputText3' />
+            <property name='raw' value='true' />
+            <property name='value' value='Tabla' />
+          </control>
+        </facet>
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlOutputText4' />
+          <property name='raw' value='true' />
+          <property name='value' value='#{camposVariable.tabla}' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+        <property name='id' value='htmlTableColumn2' />
+        <property name='label' value='Campo' />
+        <property name='sort' value='#{camposVariable.campo}' />
+        <facet name='header'>
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='javax.faces.Text'>
+            <property name='id' value='htmlOutputText5' />
+            <property name='raw' value='true' />
+            <property name='value' value='Campo' />
+          </control>
+        </facet>
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlOutputText6' />
+          <property name='raw' value='true' />
+          <property name='value' value='#{camposVariable.campo}' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+        <property name='id' value='htmlTableColumn3' />
+        <property name='label' value='Valor Inicial' />
+        <property name='sort' value='#{camposVariable.valorInicial}' />
+        <facet name='header'>
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='javax.faces.Text'>
+            <property name='id' value='htmlOutputText7' />
+            <property name='raw' value='true' />
+            <property name='value' value='Valor Inicial' />
+          </control>
+        </facet>
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlOutputText8' />
+          <property name='raw' value='true' />
+          <property name='value' value='#{camposVariable.valorInicial}' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.table.html.HtmlTableColumn' renderer-type='com.webmethods.caf.faces.render.table.IExtendedColumnRenderer'>
+        <property name='id' value='htmlTableColumn4' />
+        <property name='label' value='Valor Final' />
+        <property name='sort' value='#{camposVariable.valorFinal}' />
+        <facet name='header'>
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='javax.faces.Text'>
+            <property name='id' value='htmlOutputText9' />
+            <property name='raw' value='true' />
+            <property name='value' value='Valor Final' />
+          </control>
+        </facet>
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlOutputText10' />
+          <property name='raw' value='true' />
+          <property name='value' value='#{camposVariable.valorFinal}' />
+        </control>
+      </control>
+    </control>
+  </control>
+</view>

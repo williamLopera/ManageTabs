@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14709384259760" configfile="/ManageTabs/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="MyPortlet/*" x="122" y="562" id="pf14709387562411" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf14709387562422 pf14709387562423 pf14709387562424" path="/MyPortlet/*"/>
+  <nodes xsi:type="pageflow:PFPage" name="MyPortlet/default.view" x="338" y="178" id="pf14709387562425" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14709387562422" path="/MyPortlet/default.view"/>
+  <nodes xsi:type="pageflow:PFPage" name="MyPortlet/page2.view" x="338" y="562" id="pf14709387562436" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14709387562423" path="/MyPortlet/page2.view"/>
+  <nodes xsi:type="pageflow:PFPage" name="MyPortlet/page3.view" x="338" y="946" id="pf14709387562437" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf14709387562424" path="/MyPortlet/page3.view"/>
+  <links id="pf14709387562422" target="pf14709387562425" source="pf14709387562411" outcome="default"/>
+  <links id="pf14709387562423" target="pf14709387562436" source="pf14709387562411" outcome="page2"/>
+  <links id="pf14709387562424" target="pf14709387562437" source="pf14709387562411" outcome="page3"/>
+</pageflow:Pageflow>

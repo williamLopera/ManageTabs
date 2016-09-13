@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<view>
+  <property name='pageManagedBean' value='MyPortletpage3View' />
+  <property name='preferencesBean' value='MyPortlet' />
+  <design-time-attribute name='portlet' value='MyPortlet' />
+  <control component-type='com.webmethods.caf.faces.output.ErrorMessages' renderer-type='com.webmethods.caf.faces.output.ErrorMessages'>
+  </control>
+  <control component-type='javax.faces.HtmlForm' renderer-type='javax.faces.Form'>
+    <property name='defaultFocus' value='_first' />
+    <property name='id' value='defaultForm' />
+    <control component-type='com.webmethods.caf.faces.list.Tabs' renderer-type='com.webmethods.caf.faces.list.Tabs'>
+      <property name='id' value='tabs' />
+      <property name='rows' value='10' />
+      <property name='selected' value='#{row[0]==facesContext.viewRoot.viewId}' />
+      <property name='value' value='#{MyPortletDefaultviewView.views}' />
+      <property name='var' value='row' />
+      <control component-type='com.webmethods.caf.faces.component.portleturl.PortletUrlLink' renderer-type='javax.faces.Link'>
+        <property name='id' value='portletUrlLink' />
+        <facet name='href'>
+          <control component-type='com.webmethods.caf.faces.component.portleturl.ExtendedPortletUrl' renderer-type=''>
+            <property name='id' value='extendedPortletUrl' />
+            <property name='targetView' value='#{row[0]}' />
+          </control>
+        </facet>
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlOutputText' />
+          <property name='raw' value='true' />
+          <property name='value' value='#{row[1]}' />
+        </control>
+      </control>
+    </control>
+    <control component-type='com.webmethods.caf.faces.panel.StaticRow' renderer-type='com.webmethods.caf.faces.panel.StaticRow'>
+      <property name='id' value='staticRow' />
+      <control component-type='com.webmethods.caf.faces.panel.StaticCell' renderer-type='com.webmethods.caf.faces.panel.StaticCell'>
+        <property name='id' value='staticCell' />
+        <control component-type='javax.faces.HtmlOutputText' renderer-type='javax.faces.Text'>
+          <property name='id' value='htmlOutputText' />
+          <property name='raw' value='true' />
+          <property name='styleClass' value='portlet-msg-info' />
+          <property name='value' value='Campos Tab Page 3' />
+        </control>
+      </control>
+    </control>
+  </control>
+</view>
