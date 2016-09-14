@@ -53,8 +53,6 @@ public class MyPortlet  extends   com.webmethods.caf.faces.bean.BaseFacesPrefere
 			setLaboral(datosSolicitud.getDatosLaborales());
 			setPersonal(datosSolicitud.getDatosPersonales());
 			setMensajes("");			
-			
-			camposVariables = new ArrayList<CampoVariable>();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -136,6 +134,7 @@ public class MyPortlet  extends   com.webmethods.caf.faces.bean.BaseFacesPrefere
 	public void getAnalizarDatos(){
 		try {
 			storePreferences();
+			camposVariables = new ArrayList<CampoVariable>();   // Reiniciar lista para re-evaluar cambios
 			ArrayList<String> listaValoresPersonal = analizarDatos( "1",
 																	personalInicial.getClass(), 
 																	personalFinal.getClass(), 
