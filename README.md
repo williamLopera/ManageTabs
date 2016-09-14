@@ -1,7 +1,11 @@
 # ManageTabs -  Autor William Lopera 
 @pranical.com Sep 2016
 
-Proyecto de SoftwareAG Webmethod CAF - version. 9.5.
+Proyecto de SoftwareAG Webmethod CAF - version. 9.5. 
+
+MANEJO DE TABS CON VISTAS INDEPENDIENTES EN UN SOLO PORTLET. VALIDANDO CAMPOS Y USO DE OBJETO DE NEGOCIO COMPARTIDO POR LAS VISTAS. 
+
+
      1.- Manejo de tabs con vistas independientes en un solo portlet.
          * MyPortlet/default.view   => Datos Laborales
          * MyPortlet/page2.view     => Datos Personales
